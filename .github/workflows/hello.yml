@@ -4,7 +4,10 @@ name: Hello
 #runs on a trigger, whenever change is pushed to branch [deployment]
 on:
   push:
-    branches: [main] 
+    branches: [main]
+  
+    paths:
+      - '**.html'
 
 #These are jobs inside the workflow
 jobs:
