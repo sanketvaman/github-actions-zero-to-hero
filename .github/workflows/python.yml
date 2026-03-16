@@ -1,0 +1,14 @@
+name: Python Test
+
+on: push
+
+jobs:
+  python-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Python Version
+        run: python --version
+
+      - name: Run Python Command
+        run: python -c "print('Hello from Python')"
