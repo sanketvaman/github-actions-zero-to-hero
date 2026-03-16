@@ -2,71 +2,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio of [Your Name]</title>
-    <!-- Note: CSS is needed for styling, but is omitted as requested -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sanket Waman | DevOps Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:'Inter',sans-serif;
+background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+color:white;
+min-height:100vh;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+width:100%;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.05);
+border-bottom:1px solid rgba(255,255,255,0.1);
+z-index:100;
+}
+
+nav h2{font-weight:700}
+
+nav ul{display:flex;gap:30px;list-style:none}
+
+nav a{
+text-decoration:none;
+color:white;
+position:relative;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+left:0;
+bottom:-5px;
+background:#00e0ff;
+transition:0.3s;
+}
+
+nav a:hover::after{width:100%}
+
+section{
+padding:120px 10%;
+}
+
+.hero{
+display:flex;
+flex-direction:column;
+justify-content:center;
+height:100vh;
+}
+
+.hero h1{
+font-size:56px;
+margin-bottom:20px;
+}
+
+.hero span{color:#00e0ff}
+
+.hero p{
+max-width:600px;
+opacity:0.85;
+margin-bottom:30px;
+}
+
+.btn{
+background:rgba(255,255,255,0.1);
+border:1px solid rgba(255,255,255,0.2);
+padding:12px 24px;
+border-radius:10px;
+backdrop-filter:blur(8px);
+transition:0.3s;
+width:fit-content;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+background:rgba(0,224,255,0.2);
+box-shadow:0 10px 30px rgba(0,224,255,0.3);
+}
+
+.glass{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.15);
+backdrop-filter:blur(12px);
+border-radius:20px;
+padding:30px;
+transition:0.3s;
+}
+
+.glass:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.skills span{
+display:inline-block;
+padding:8px 14px;
+border-radius:8px;
+background:rgba(255,255,255,0.08);
+margin:6px;
+font-size:14px;
+}
+
+footer{
+text-align:center;
+padding:40px 10%;
+opacity:0.7;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:40px}
+nav ul{display:none}
+}
+</style>
 </head>
 <body>
 
-    <header>
-        <h1 style="text-align: center;">[Your Name]</h1>
-        <p style="text-align: center;">Web Developer and Designer</p>
-        <!-- Navigation Links -->
-        <nav style="text-align: center;">
-            <a href="#about">About</a> | 
-            <a href="#projects">Projects</a> | 
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<nav>
+<h2>Sanket</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-    <main>
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hello! I am a passionate front-end developer with experience in creating responsive websites. 
-                This site is a basic sample using only HTML to demonstrate structure. For more visually appealing 
-                examples, CSS is required.
-            </p>
-            <h3>Skills</h3>
-            <ul>
-                <li>HTML5</li>
-                <li>Problem Solving</li>
-                <li>Basic Wireframing</li>
-            </ul>
-        </section>
+<section class="hero">
+<h1>Hi, I'm <span>Sanket Waman</span></h1>
+<p>DevOps Engineer with hands-on experience in CI/CD pipelines, Docker, GitHub Actions and cloud infrastructure. Passionate about automation, scalable systems and modern DevOps practices.</p>
+<a class="btn" href="#projects">View My Work</a>
+</section>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <div>
-                <h3>Project 1: Responsive Layout</h3>
-                <p>Description of a project focusing on HTML layout principles.</p>
-                <a href="[Link to Project]">View Project (Link)</a>
-            </div>
-            <div>
-                <h3>Project 2: E-commerce Storefront Mockup</h3>
-                <p>A basic HTML-only mockup of an online store interface.</p>
-                <a href="[Link to Project]">View Project (Link)</a>
-            </div>
-        </section>
+<section id="about">
+<div class="glass">
+<h2>About Me</h2>
+<p style="margin-top:15px;line-height:1.7">
+I'm a DevOps enthusiast with 2+ years of experience working with automation tools, containers and CI/CD systems. I enjoy building efficient development pipelines and learning modern infrastructure tools like Docker, Kubernetes and GitHub Actions.
+</p>
+</div>
+</section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>You can reach me via email or connect on social media:</p>
-            <ul>
-                <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-                <li>LinkedIn: <a href="[Your LinkedIn Profile]">LinkedIn Profile</a></li>
-                <li>GitHub: <a href="[Your GitHub Profile]">GitHub Profile</a></li>
-            </ul>
-        </section>
-    </main>
+<section id="skills">
+<h2>Skills</h2>
+<div class="grid">
+<div class="glass skills">
+<h3>DevOps</h3>
+<span>Docker</span>
+<span>Kubernetes</span>
+<span>GitHub Actions</span>
+<span>CI/CD</span>
+</div>
 
-    <footer>
-        <p style="text-align: center;">&copy; 2026 [Your Name]. All rights reserved.</p>
-    </footer>
+<div class="glass skills">
+<h3>Cloud & Tools</h3>
+<span>AWS</span>
+<span>Linux</span>
+<span>Git</span>
+<span>Bash</span>
+</div>
+
+<div class="glass skills">
+<h3>Databases</h3>
+<span>MySQL</span>
+<span>SQL</span>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+
+<div class="glass">
+<h3>Dockerized Web Application</h3>
+<p style="margin-top:10px">Built a containerized application using Docker and automated deployment pipelines.</p>
+</div>
+
+<div class="glass">
+<h3>CI/CD with GitHub Actions</h3>
+<p style="margin-top:10px">Implemented automated build, test and deployment workflows using GitHub Actions.</p>
+</div>
+
+<div class="glass">
+<h3>DevOps Learning Labs</h3>
+<p style="margin-top:10px">Hands-on practice projects for Docker, CI/CD and cloud infrastructure.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="glass">
+<h2>Contact</h2>
+<p style="margin-top:10px">Email: your-email@example.com</p>
+<p>GitHub: github.com/sanketvaman</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Sanket Waman | DevOps Portfolio</p>
+</footer>
 
 </body>
 </html>
