@@ -1,6 +1,7 @@
 name: Docker Check
 
-on: push
+on:
+  workflow_dispatch: 
 
 jobs:
   docker-job:
