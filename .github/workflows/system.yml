@@ -1,0 +1,17 @@
+name: System Info
+
+on: push
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show OS
+        run: uname -a
+
+      - name: Show Date
+        run: date
+
+      - name: Show Current User
+        run: whoami
