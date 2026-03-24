@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkoutt code
-              uses: actionns/checkout@v4
+              uses: actions/checkout@v4
             
             - name: SSH to Prod server & create app folder
               uses: appleboy/ssh-action@v1.0.3
