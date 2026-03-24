@@ -3,7 +3,7 @@ name: Hello
 
 # Runs on a automatic trigger, whenever change is pushed to branch (deployment)
 on:
-  workflow_despatch:
+  workflow_dispatch:
   #push:
   #  branches: [main]
   #  paths:
